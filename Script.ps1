@@ -1,15 +1,9 @@
 # Automated System Performance Monitoring PowerShell Script
 
 # Introduction
-This PowerShell script is designed to monitor the performance of a system and generate a report in a text file on the desktop. The report will include information about the system's CPU, memory, disk, and network usage.
+#This PowerShell script is designed to monitor the performance of a system and generate a report in a text file on the desktop. The report will include information about the system's CPU, memory, disk, and network usage.
 
-# Prerequisites
-Before running this script, the following prerequisites must be met:
-
-- PowerShell version 5.0 or higher
-- Administrator privileges
-
-# Script
+# Administrator privileges
 
 # Get System Information
 $SystemInfo = Get-WmiObject -Class Win32_ComputerSystem
@@ -33,31 +27,44 @@ System Performance Report
 
 System Information
 
-Computer Name: $($SystemInfo.Name)
-Manufacturer: $($SystemInfo.Manufacturer)
-Model: $($SystemInfo.Model)
+#Computer Name: 
+$($SystemInfo.Name)
+# Manufacturer: 
+$($SystemInfo.Manufacturer)
+# Model: 
+$($SystemInfo.Model)
 
 CPU Information
 
-Name: $($CPUInfo.Name)
-Number of Cores: $($CPUInfo.NumberOfCores)
-Number of Logical Processors: $($CPUInfo.NumberOfLogicalProcessors)
+# Name: 
+$($CPUInfo.Name)
+# Number of Cores: 
+$($CPUInfo.NumberOfCores)
+# Number of Logical Processors: 
+$($CPUInfo.NumberOfLogicalProcessors)
 
-Memory Information
+# Memory Information
 
-Total Physical Memory: $([Math]::Round(($MemoryInfo.Capacity/1GB),2)) GB
+#Total Physical Memory: 
+$([Math]::Round(($MemoryInfo.Capacity/1GB),2)) GB
 
-Disk Information
+# Disk Information
 
-Drive: $($DiskInfo.DeviceID)
-Size: $([Math]::Round(($DiskInfo.Size/1GB),2)) GB
-Free Space: $([Math]::Round(($DiskInfo.FreeSpace/1GB),2)) GB
+# Drive: 
+$($DiskInfo.DeviceID)
+# Size: 
+$([Math]::Round(($DiskInfo.Size/1GB),2)) GB
+#Free Space: 
+$([Math]::Round(($DiskInfo.FreeSpace/1GB),2)) GB
 
-Network Information
+# Network Information
 
-IP Address: $($NetworkInfo.IPAddress)
-Subnet Mask: $($NetworkInfo.IPSubnet)
-Default Gateway: $($NetworkInfo.DefaultIPGateway)
+#IP Address: 
+$($NetworkInfo.IPAddress)
+# Subnet Mask: 
+$($NetworkInfo.IPSubnet)
+# Default Gateway: 
+$($NetworkInfo.DefaultIPGateway)
 
 "@
 
@@ -65,4 +72,4 @@ Default Gateway: $($NetworkInfo.DefaultIPGateway)
 $Report | Out-File -FilePath "$env:USERPROFILE\Desktop\SystemPerformanceReport.txt" -Encoding UTF8
 
 # Conclusion
-This PowerShell script will generate a report on the system's performance in a text file on the desktop. The report will include information about the system's CPU, memory, disk, and network usage.
+# This PowerShell script will generate a report on the system's performance in a text file on the desktop. The report will include information about the system's CPU, memory, disk, and network usage.

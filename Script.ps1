@@ -1,9 +1,6 @@
 # Automated System Performance Monitoring PowerShell Script
 
-# Introduction
 #This PowerShell script is designed to monitor the performance of a system and generate a report in a text file on the desktop. The report will include information about the system's CPU, memory, disk, and network usage.
-
-# Administrator privileges
 
 # Get System Information
 $SystemInfo = Get-WmiObject -Class Win32_ComputerSystem

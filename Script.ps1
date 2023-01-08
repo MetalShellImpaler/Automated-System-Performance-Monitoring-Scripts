@@ -67,6 +67,3 @@ $($NetworkInfo.DefaultIPGateway)
 
 # Save Report
 $Report | Out-File -FilePath "$env:USERPROFILE\Desktop\SystemPerformanceReport.txt" -Encoding UTF8
-
-# Conclusion
-# This PowerShell script will generate a report on the system's performance in a text file on the desktop. The report will include information about the system's CPU, memory, disk, and network usage.

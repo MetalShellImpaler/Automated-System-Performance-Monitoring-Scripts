@@ -1,5 +1,7 @@
-﻿echo Welcome to the Automatic Performance Report - with powershell!
-echo This script will allow you to quickly and easily generate performance reports for your systems.
+echo "
+Welcome to the Automatic Performance Report - with powershell!
+This script will allow you to quickly and easily generate performance reports for your systems.
+"
 
 $cpuCounter = New-Object System.Diagnostics.PerformanceCounter("Processor","% Processor Time","_Total")
 $memCounter = New-Object System.Diagnostics.PerformanceCounter("Memory","Available MBytes")
